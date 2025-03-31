@@ -1,0 +1,30 @@
+{
+    "name": "ТвічЮА",
+    "description": "Розширення для української локалізації",
+    "version": "2.4",
+    "manifest_version": 3,
+    "icons": {
+      "48": "/images/logo48.png",
+      "128": "/images/logo128.png"
+    },
+    "permissions": [
+      "storage"
+    ],
+    "content_scripts": [
+      {
+        "matches": ["https://*.twitch.tv/*"],
+        "css": ["src/main.css"],
+        "js": ["src/main.js"]
+      }
+    ],
+    "web_accessible_resources": [
+      {
+        "resources": [
+          "src/locales/uk.json",
+          "images/tu.png"
+        ],
+        "matches": ["https://*.twitch.tv/*"]
+      }
+    ],
+  "options_page": "src/OptionPage/OptionPage.html"
+  }
